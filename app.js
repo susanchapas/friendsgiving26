@@ -31,12 +31,9 @@ const MENU = [
   },
 ];
 
-const DIET = {
-  veg: { mark: "V", label: "Vegetarian" },
-  halal: { mark: "H", label: "Halal" },
-};
+const DIET = { veg: "Vegetarian", halal: "Halal" };
 
-const tag = (k) => `<abbr class="tag tag-${k}" title="${DIET[k].label}" aria-label="${DIET[k].label}">${DIET[k].mark}</abbr>`;
+const tag = (k) => `<span class="tag tag-${k}" role="img" title="${DIET[k]}" aria-label="${DIET[k]}"></span>`;
 
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
